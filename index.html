@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="crowdfundingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to HIIIIII</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your styles -->
+</head>
+<script src="app.js"></script>
+<body ng-controller="WelcomeController">
+    <div class="welcome-container">
+        <h1>Welcome to <span class="highlight">HIIIIII</span></h1>
+        <p>Your platform for innovation and crowdfunding</p>
+        <div class="button-container">
+            <button class="btn" ng-click="goToLogin()">Login</button>
+            <button class="btn" ng-click="showSignInOptions()">Sign In</button>
+        </div>
+        <div ng-if="showOptions" class="sign-in-options">
+            <h2>Sign In As:</h2>
+            <button class="btn" ng-click="goToUserSignIn()">User</button>
+            <button class="btn" ng-click="goToCompanySignIn()">Company</button>
+        </div>
+    </div>
+
+    <ng-view></ng-view> 
+
+    
+</body>
+</html>

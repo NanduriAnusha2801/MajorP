@@ -1,0 +1,29 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="crowdfundingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to HIIIIII</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="LoginController">
+    <div class="auth-container">
+        <h1>Login to <span class="highlight">HIIIIII</span></h1>
+        <p>Enter your credentials to continue</p>
+        
+        <form class="form-container">
+            <input type="text" placeholder="Username" ng-model="username" required>
+            <input type="password" placeholder="Password" ng-model="password" required>
+            <button type="submit" class="btn login-btn" ng-click="login()">Login</button>
+        </form>
+
+        <div class="social-login">
+            <p>Or login with:</p>
+            <button class="btn google-btn" ng-click="loginWith('Google')">Google</button>
+            <button class="btn microsoft-btn" ng-click="loginWith('Microsoft')">Microsoft</button>
+            <button class="btn apple-btn" ng-click="loginWith('Apple')">Apple</button>
+        </div>
+    </div>
+</body>
+</html>

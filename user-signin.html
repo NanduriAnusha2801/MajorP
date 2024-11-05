@@ -1,0 +1,23 @@
+<!-- user-signin.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="crowdfundingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up as User - HIIIIII</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="UserSignInController">
+    <div class="auth-container">
+        <h1>Sign Up as a <span class="highlight">User</span></h1>
+        <form class="form-container">
+            <input type="text" placeholder="Full Name" ng-model="fullName" required>
+            <input type="email" placeholder="Email" ng-model="email" required>
+            <input type="text" placeholder="Phone Number" ng-model="phone" required>
+            <button type="button" class="btn otp-btn" ng-click="sendOTP()">Send OTP</button>
+            <input type="text" placeholder="Enter OTP" ng-model="otp" required>
+            <button type="submit" class="btn signup-btn" ng-click="signUp()">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
